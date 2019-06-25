@@ -1,5 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<h2>This H2 title</h2>
+<div class="container margin-top-15">
+  <div class="row">
+    <div class="col col-md-6">
+      <input #origin_word="ngModel" [(ngModel)]="originWord" type="text" class="form-control" placeholder="Entry a word here ...">
+      {{originWord}}
+    </div>
+    <div class="col col-md-2">
+      <button class="btn btn-primary" (click)="save_word()" [disabled]="!originWord" >Save</button>
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
